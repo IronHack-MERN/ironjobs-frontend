@@ -126,6 +126,7 @@ Add statistics:
     state: string,
     hired: boolean
 }
+```
 
 ## Links
 
