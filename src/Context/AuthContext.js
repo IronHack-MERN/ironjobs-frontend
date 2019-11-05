@@ -3,7 +3,7 @@ import authService from '../services/authService';
 
 const AuthContext = createContext();
 
-const Provider = AuthContext.Provider;
+const {Provider} = AuthContext;
 
 const AuthConsumer = AuthContext.Consumer;
 
@@ -61,6 +61,7 @@ export default class AuthProvider extends Component {
           user: loggedUser,
           isLoading: false
         })
+        console.log('loggeduser: ',loggedUser)
       })
       .catch(() => {
         this.setState({
@@ -95,7 +96,7 @@ export default class AuthProvider extends Component {
     const { children } = this.props;
     if (isLoading) {
       return <div>Loading...</div>
-    } else {
+    } 
       return (
         <Provider value={{
           isLoading,
@@ -107,6 +108,6 @@ export default class AuthProvider extends Component {
           {children}
         </Provider>
       )
-    }
+    
   }
 }
