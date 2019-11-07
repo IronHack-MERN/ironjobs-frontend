@@ -28,12 +28,15 @@ class ListJobs extends Component {
         <h1>Últimas ofertas publicadas</h1>
 
         <table className="table-jobs">
+        <thead>
           <tr>
             <th>Job</th>
             <th>Company</th>
             <th>Salary</th>
             <th>Location</th>
-          </tr>
+            </tr>
+        </thead>
+
 
           {!loading && jobs.map((job, key) => {
             return (

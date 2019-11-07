@@ -6,14 +6,16 @@ class JobItem extends Component {
     const { job, id, key } = this.props;
 
     return (
-      <div>
+      <div className='table-jobs'>
+        <tbody>
           <tr>
             <td>{job.title}</td>
             <td>{job.company}</td>
             <td>{job.salary}</td>
             <td>{job.location}</td>
           </tr>
-       
+        </tbody>
+
       </div>
     );
   }
