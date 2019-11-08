@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import PrivateView from './views/PrivateView';
 import Login from './views/auth/Login';
+import Logout from './views/Logout'
 import Signup from './views/auth/Signup';
 import { withAuth } from './Context/AuthContext';
 
@@ -11,18 +12,28 @@ import AnonRoute from './components/AnonRoute';
 import LandingPage from './views/LandingPage';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      hola: 'hola',
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
   render() {
-    const { handleLogout } = this.props;
     return (
       <>
-          {/* <button onClick={handleLogout}>logout</button>
+        {/* <button onClick={handleLogout}>logout</button>
           <Login/> */}
-          <LandingPage />
-          <Router>
-            <AnonRoute exact path="/login" component={Login} />
-            <AnonRoute exact path="/signup" component={Signup} />
-            <PrivateRoute exact path="/private" component={PrivateView} />
-          </Router>
+        <Router>
+          <Route exact path="/" component={LandingPage} />
+          
+          <AnonRoute exact path="/login" component={Login} />
+          <AnonRoute exact path="/signup" component={Signup} />
+
+          <PrivateRoute exact path="/logout" component={Logout} />
+          <PrivateRoute exact path="/private" component={PrivateView} />
+        </Router>
       </>
     );
   }

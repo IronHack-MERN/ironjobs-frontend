@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Button = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const { name } = props;
+const Button = ({ children, link }) => {
+  function handleClick(e) {
+    e.preventDefault()
+  }
+
   return (
-    <button >
-      {name}
+    <button onClick={handleClick}>
+      {children}
     </button>
   );
 };

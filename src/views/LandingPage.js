@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import ListJobs from '../components/ListJobs';
+import Login from '../views/auth/Login';
+import '../css/Login.scss';
 import '../css/LandingPage.css';
+import { withAuth } from '../Context/AuthContext';
 
-class LandingPage extends Component {
-
-  // eslint-disable-next-line class-methods-use-this
-  render() {
-
+const LandingPage = (props) => {
     return (
       <div className='wrapper'>
         <div className='content'>
@@ -16,20 +16,28 @@ class LandingPage extends Component {
             <ListJobs />
           </div>
 
-        <div className='landing-buttons'>
-          <div className='center'>
-              <Button
-                name='register'
-              />
-              <Button
-                name='login'
-              />
+          <div className='landing-buttons'>
+            <div className='center'>
+            <Button link='/login'>
+                Login
+              </Button>
+
+              <Button link='/login'>
+                Register
+              </Button>
+
+          {
+              props.isLoggedin
+              ? <h1><Link to='/logout' style={{ textDecoration: 'none' }}> Logout</Link></h1>
+              : <h1><Link to='/login' style={{ textDecoration: 'none' }}> Login</Link></h1>
+          }
+
+
             </div>
-        </div>
+          </div>
         </div>
       </div>
     )
   }
-}
 
-export default LandingPage;
+export default withAuth(LandingPage);
