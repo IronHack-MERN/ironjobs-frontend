@@ -1,12 +1,14 @@
 import React from 'react';
 import {withAuth} from '../Context/AuthContext';
 import Header from '../components/Header';
+import NavBar from '../components/NavBar';
 
 const PrivateView = ({ user }) => {
   return (
     <div>
       Welcome {user.username}
       <Header />
+      <NavBar />
     </div>
   );
 };

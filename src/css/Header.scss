@@ -21,13 +21,13 @@ h1, h3 {
   text-align: center;
 }
 
-// header {
-//   background: rgba(0,0,0,0.9);
-//   width: 80%;
-//   position: fixed;
-//   z-index: 100;
-//   margin: 0 auto;
-// }
+.nav-bar {
+  background: rgba(0,0,0,0.9);
+  width: 80%;
+  position: fixed;
+  z-index: 100;
+  margin: 0 auto;
+}
 
 nav {
   float: left; /* Desplazamos el nav hacia la izquierda */
