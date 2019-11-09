@@ -1,29 +1,30 @@
+// eslint-disable-next-line max-classes-per-file
 import React, { Component, createContext } from 'react';
 import authService from '../services/authService';
 
 const AuthContext = createContext();
 
-const {Provider} = AuthContext;
+const { Provider } = AuthContext;
 
 const AuthConsumer = AuthContext.Consumer;
 
 export const withAuth = (Comp) => {
   return class WithAuth extends Component {
-    
+
     render() {
       return (
         <AuthConsumer>
-          { 
-            ({isLoading,
+          {
+            ({ isLoading,
               isLoggedin,
               user,
               handleLogin,
-              handleLogout
-            }) => <Comp {...this.props} isLoading={isLoading} isLoggedin={isLoggedin} user={user} handleLogin={handleLogin} handleLogout={handleLogout}  />
+              handleLogout,
+              handleSignup,
+            }) => <Comp {...this.props} isLoading={isLoading} isLoggedin={isLoggedin} user={user} handleLogin={handleLogin} handleLogout={handleLogout} handleSignup={handleSignup}/>
           }
         </AuthConsumer>
       )
-        
     }
   }
 }
@@ -37,14 +38,14 @@ export default class AuthProvider extends Component {
 
   componentDidMount() {
     authService.me()
-    .then((user) => {
+      .then((user) => {
         this.setState({
           isLoggedin: true,
           user,
           isLoading: false,
         })
-        
-        console.log('me', user);
+
+        console.log('mememe', user);
       })
       .catch(() => {
         this.setState({
@@ -61,7 +62,7 @@ export default class AuthProvider extends Component {
           user: loggedUser,
           isLoading: false
         })
-        console.log('loggeduser: ',loggedUser)
+        console.log('loggeduser: ', loggedUser)
       })
       .catch(() => {
         this.setState({
@@ -91,23 +92,40 @@ export default class AuthProvider extends Component {
       })
   }
 
+  handleSignup = (user) => {
+    authService.signup(user)
+      .then((registeredUser) => {
+        this.setState({
+          isLoggedin: true,
+          user: registeredUser,
+          isLoading: false
+        })
+      })
+      .catch(() => {
+        this.setState({
+          isLoading: false,
+        })
+      })
+  }
+
   render() {
     const { isLoading, isLoggedin, user } = this.state
     const { children } = this.props;
     if (isLoading) {
       return <div>Loading...</div>
-    } 
-      return (
-        <Provider value={{
-          isLoading,
-          isLoggedin,
-          user,
-          handleLogin: this.handleLogin,
-          handleLogout: this.handleLogout,
-        }}>
-          {children}
-        </Provider>
-      )
-    
+    }
+    return (
+      <Provider value={{
+        isLoading,
+        isLoggedin,
+        user,
+        handleLogin: this.handleLogin,
+        handleLogout: this.handleLogout,
+        handleSignup: this.handleSignup
+      }}>
+        {children}
+      </Provider>
+    )
+
   }
 }
