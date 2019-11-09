@@ -1,11 +1,12 @@
 import React from 'react';
 import {withAuth} from '../Context/AuthContext';
+import Header from '../components/Header';
 
 const PrivateView = ({ user }) => {
   return (
     <div>
-      PrivateView
-      user: {user.username}
+      Welcome {user.username}
+      <Header />
     </div>
   );
 };
