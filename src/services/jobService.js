@@ -2,13 +2,14 @@ import axios from 'axios';
 
 class JobService {
     constructor() {
-        this.axios = axios.create({
-            baseURL: 'http://localhost:3001',  
+        this.job = axios.create({
+            baseURL: process.env.REACT_APP_BACKEND_BASE_URL,
+            withCredentials:true,
         });
     }
 
     async getAllJobs() {
-        return this.axios.get('/jobs')
+        return this.job.get('/jobs')
             .then(({ data: jobs }) => jobs);
     }
 }
