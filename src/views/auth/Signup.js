@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import authService from '../../services/authService';
+import { withAuth } from '../../Context/AuthContext';
 
 class Signup extends Component {
   state = {
@@ -15,29 +15,18 @@ class Signup extends Component {
     });
   }
 
-  // ****** POR QUÉ NO FUNCIONAAA??
-  // handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   const { username, password } = this.state;
-  //   this.props.handleSignup({
-  //     username,
-  //     password,
-  //   })
-  // }
-
-  handleFormSubmit = (event) => {
-    // para evitar que el botón haga submit
-    event.preventDefault();
-    authService.signup(this.state)
-    this.setState({
-      username: '',
-      password: '',
-    });
-
+  handleFormSubmit = (e) => {
+    e.preventDefault();
+    const { username, password } = this.state;
+    this.props.handleSignup({
+      username,
+      password,
+    })
   }
 
   render() {
     const { username, password } = this.state;
+    console.log(this.props)
     return (
       <div>
         <h1>Welcome to the Iron Jobs</h1><br />
@@ -75,4 +64,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default withAuth(Signup);

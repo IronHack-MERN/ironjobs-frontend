@@ -6,7 +6,12 @@ import MyProfile from '../components/MyProfile';
 
 const PrivateView = ({ user }) => {
   return (
-    <div>
+    <div
+      style={{
+        maxWidth: 900,
+        margin: '0 auto'
+      }}
+    >
       Welcome {user.username}
       <Header />
       <NavBar />
