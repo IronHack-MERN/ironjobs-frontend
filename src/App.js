@@ -29,7 +29,7 @@ class App extends Component {
           <Route exact path="/" component={LandingPage} />
           
           <AnonRoute exact path="/login" component={Login} />
-          <AnonRoute exact path="/signup" component={Signup} />
+          <AnonRoute exact path="/register" component={Signup} />
 
           <PrivateRoute exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/private" component={PrivateView} />

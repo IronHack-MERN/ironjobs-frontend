@@ -18,20 +18,12 @@ const LandingPage = (props) => {
 
           <div className='landing-buttons'>
             <div className='center'>
-            <Button link='/login'>
-                Login
-              </Button>
-
-              <Button link='/login'>
-                Register
-              </Button>
-
+            <Link to={"/register"}> Register</Link>
           {
               props.isLoggedin
-              ? <h1><Link to='/logout' style={{ textDecoration: 'none' }}> Logout</Link></h1>
-              : <h1><Link to='/login' style={{ textDecoration: 'none' }}> Login</Link></h1>
+              ? <Link to='/logout' style={{ textDecoration: 'none' }}> Logout</Link>
+              : <Link to='/login' style={{ textDecoration: 'none' }}> Login</Link>
           }
-
 
             </div>
           </div>

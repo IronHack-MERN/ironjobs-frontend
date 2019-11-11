@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuth } from '../../Context/AuthContext';
-import '../../css/Login.scss';
+import '../../css/Login.css';
 
 class Login extends Component {
   state = {
@@ -27,9 +27,10 @@ class Login extends Component {
     console.log('login: ',this.props)
     return (
       <div className='login'>
-        <header></header>
-        <h1> Welcome to the IronJobs</h1>
-        <h3>Sign up and look for an offer that fits your knowledge</h3>
+        <header>
+          <h1> Welcome to the IronJobs</h1>
+          <h3>Sign up and look for an offer that fits your knowledge</h3>
+        </header>
         <form className='login-form' onSubmit={this.handleFormSubmit}>
           <label htmlFor='username' >Username:</label>
           <input 

@@ -8,7 +8,7 @@ class Signup extends Component {
     password: "",
   };
 
-  handleChange = (event) => {  
+  handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -28,35 +28,43 @@ class Signup extends Component {
     const { username, password } = this.state;
     console.log(this.props)
     return (
-      <div>
+      <div className="center">
         <h1>Welcome to the Iron Jobs</h1><br />
         <h3>To register we need you to enter your email and password</h3> <br />
         <form onSubmit={this.handleFormSubmit}><br />
-          <label htmlFor='username'>Username:</label> <br />
-          <input
-            id='username'
-            type="text"
-            name="username"
-            value={username}
-            onChange={this.handleChange}
-            placeholder='username'
-          />
-
-          <label htmlFor='password'>Password:</label>
-          <input
-            id='password'
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange} 
-            placeholder='password' 
-          />
-
-          <input type="submit" value="Signup" />
+          <p>
+            <label htmlFor='username'>Username:</label>
+            <input
+              id='username'
+              type="text"
+              name="username"
+              value={username}
+              onChange={this.handleChange}
+              placeholder='username'
+            />
+          </p>
+          <p>
+            <label htmlFor='password'>Password:</label>
+            <input
+              id='password'
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+              placeholder='password'
+            />
+          </p>
+          <p>
+            <input type="submit" value="Signup" />
+          </p>
         </form>
 
-        <p>Already have account?
-          <Link to={"/login"}> Login</Link>
+        <div className='have-account'>
+          Already have account?
+        <Link to={"/login"}> Login</Link>
+        </div>
+        <p>
+
         </p>
 
       </div>
