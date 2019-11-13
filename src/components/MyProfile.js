@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import '../css/MyProfile.css';
+import { Link } from 'react-router-dom';
+import itemsProfile from '../data/items-profile.json';
+
 
 class MyProfile extends Component {
   render() {
@@ -9,14 +12,22 @@ class MyProfile extends Component {
       <div className='content'>
         Mi usuario: <strong>{username}</strong>
         <div className="">
-          <aside>
-            <ul>
-              <li><a href="#" className="w3-bar-item w3-button" >Personal Information</a></li>
-              <li><a href="#" className="w3-bar-item w3-button">Studies</a></li>
-              <li><a href="#" className="w3-bar-item w3-button">Experience</a></li>
-              <li><a href="#" className="w3-bar-item w3-button">Languages</a></li>
-            </ul>
-          </aside>
+          {
+            itemsProfile.map((oneItem, index) => {
+              return (
+                <div key={`${oneItem.view}-${index}`}>
+                  <h3> 
+                    {/* <Link className="list-group-item list-group-item-action" to={`/countries/${oneItem.name}`}>
+                      {oneItem.name}
+                    </Link> */}
+                    <Link>
+                      {oneItem.view}
+                    </Link>
+                  </h3>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     );
