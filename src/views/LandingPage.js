@@ -11,7 +11,6 @@ const LandingPage = (props) => {
     return (
       <div className='wrapper'>
         <div className='content'>
-          <h1>IRON JOBS</h1>
           <div className='list-jobs'>
             <ListJobs />
           </div>
