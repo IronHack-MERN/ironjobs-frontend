@@ -1,8 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {withAuth} from '../Context/AuthContext';
-import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import MyProfile from '../components/MyProfile';
+import PrivateRoute from '../components/PrivateRoute';
+import MyProfileDetail from '../components/MyProfileDetail';
 
 const PrivateView = ({ user }) => {
   return (
@@ -12,12 +14,13 @@ const PrivateView = ({ user }) => {
         margin: '0 auto'
       }}
     >
-      Welcome {user.username}
-      <Header />
       <NavBar />
-      <MyProfile 
-        user = {user}
-      />
+      <Router>
+        <MyProfile 
+          user = {user}
+        />
+          <PrivateRoute exact path='/private/:id' component={MyProfileDetail} />
+      </Router>
     </div>
   );
 };
