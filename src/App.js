@@ -25,8 +25,6 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <button onClick={handleLogout}>logout</button>
-          <Login/> */}
         <Router>
           <Route exact path="/" component={LandingPage} />
           
@@ -34,10 +32,9 @@ class App extends Component {
           <AnonRoute exact path="/register" component={Signup} />
 
           <PrivateRoute exact path="/logout" component={Logout} />
+          
           <PrivateRoute exact path="/private" component={PrivateView} />
-
-          <PrivateRoute exact path='/profile' component={MyProfile} />
-          <PrivateRoute exact path='/profile/:id' component={MyProfileDetail} />
+          <PrivateRoute exact path='/private/:id' component={MyProfileDetail} />
 
         </Router>
       </>

@@ -16,9 +16,6 @@ class MyProfile extends Component {
               return (
                 <div key={`${oneItem.view}-${index}`}>
                   <h3> 
-                    {/* <Link className="list-group-item list-group-item-action" to={`/countries/${oneItem.name}`}>
-                      {oneItem.name}
-                    </Link> */}
                     <Link to={`/private/${oneItem.view}`} >
                       {oneItem.view}
                     </Link>
