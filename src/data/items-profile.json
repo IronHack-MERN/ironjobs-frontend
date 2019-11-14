@@ -1,14 +1,14 @@
 [
 	{
-    "view": "Personal"
+    "view": "personal"
   },
   {
-    "view": "Studies"
+    "view": "studies"
   },
   {
-    "view": "Exp¡erience"
+    "view": "experience"
   },
   {
-    "view": "Languages"
+    "view": "languages"
   }
 ]

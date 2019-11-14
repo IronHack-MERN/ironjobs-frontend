@@ -10,7 +10,6 @@ class MyProfile extends Component {
 
     return (
       <div className='content'>
-        Mi usuario: <strong>{username}</strong>
         <div className="">
           {
             itemsProfile.map((oneItem, index) => {
@@ -20,7 +19,7 @@ class MyProfile extends Component {
                     {/* <Link className="list-group-item list-group-item-action" to={`/countries/${oneItem.name}`}>
                       {oneItem.name}
                     </Link> */}
-                    <Link>
+                    <Link to={`/private/${oneItem.view}`} >
                       {oneItem.view}
                     </Link>
                   </h3>

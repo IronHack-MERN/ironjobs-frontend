@@ -10,6 +10,8 @@ import { withAuth } from './Context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import LandingPage from './views/LandingPage';
+import MyProfile from './components/MyProfile';
+import MyProfileDetail from './components/MyProfileDetail';
 
 class App extends Component {
   constructor() {
@@ -33,6 +35,10 @@ class App extends Component {
 
           <PrivateRoute exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/private" component={PrivateView} />
+
+          <PrivateRoute exact path='/profile' component={MyProfile} />
+          <PrivateRoute exact path='/profile/:id' component={MyProfileDetail} />
+
         </Router>
       </>
     );
