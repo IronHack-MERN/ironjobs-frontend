@@ -107,7 +107,7 @@ table {
   border-spacing: 0;
   border: 2px solid $background;
   width: 100%;
-  margin: 50px auto;
+  margin: 0 auto;
   border-radius: .25rem;
   text-align: center;
 }
@@ -158,7 +158,7 @@ tbody td {
 }
 
 td:last-child {
-  text-align: right;
+  text-align: center;
   padding-right: 10px;
 }
 
