@@ -22,11 +22,11 @@ const myProfileDetails = (props) => {
         <thead></thead>
         <tbody>
           <tr>
-            <td>Capital</td>
+            <td>View</td>
             <td>{foundProfile.view}</td>
           </tr>
           <tr>
-            <td>Area</td>
+            <td>View</td>
             <td>{foundProfile.view}
             </td>
           </tr>
