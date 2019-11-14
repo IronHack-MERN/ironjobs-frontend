@@ -29,8 +29,6 @@ class Signup extends Component {
     console.log(this.props)
     return (
       <div className="center">
-        <h1>Welcome to the Iron Jobs</h1><br />
-        <h3>To register we need you to enter your email and password</h3> <br />
         <form onSubmit={this.handleFormSubmit}><br />
           <p>
             <label htmlFor='username'>Username:</label>

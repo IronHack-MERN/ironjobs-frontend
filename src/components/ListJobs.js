@@ -24,9 +24,12 @@ class ListJobs extends Component {
     const { jobs, loading } = this.state;
     return (
       <div className='wrapper'>
-        <h1>Últimas ofertas publicadas</h1>
-
         <table className="table-jobs">
+          <thead>
+            <tr>
+              <td colspan="4">LATEST PUBLISHED OFFERS</td>
+            </tr>
+          </thead>
           <thead>
             <tr>
               <th>Job</th>
