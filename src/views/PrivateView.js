@@ -19,7 +19,7 @@ const PrivateView = ({ user }) => {
         <MyProfile 
           user = {user}
         />
-          <PrivateRoute exact path='/private/:id' component={MyProfileDetail} />
+        <PrivateRoute exact path='/private/:id' component={MyProfileDetail} />
       </Router>
     </div>
   );

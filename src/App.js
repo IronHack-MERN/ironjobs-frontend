@@ -10,6 +10,8 @@ import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import LandingPage from './views/LandingPage';
 import Header from './components/Header';
+import JobMenu from './components/job/JobMenu';
+import JobDetail from './components/job/JobDetail'
 
 class App extends Component {
   constructor() {
@@ -32,6 +34,11 @@ class App extends Component {
 
           <PrivateRoute exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/private" component={PrivateView} />
+
+          {/* Nav Bar */}
+          <PrivateRoute exact path="/private/jobs" component={JobMenu} />
+          <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
+
         </Router>
       </>
     );

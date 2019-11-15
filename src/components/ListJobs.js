@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import jobService from '../services/jobService';
 
 class ListJobs extends Component {
@@ -38,14 +39,25 @@ class ListJobs extends Component {
               <th>Location</th>
             </tr>
           </thead>
-          {!loading && jobs.map((job, key) => {
-            return (
-              <tbody key={key}>
+
+          {!loading && jobs.map((job, index) => {
+            return (            
+              <tbody key={`${job._id}-${index}`}>
                 <tr>
+                <Link 
+                  to = {{
+                    pathname: `/private/jobs/${job._id}`,
+                    props:{
+                      job: {job}
+                    }
+                  }}
+                >
                   <td>{job.title}</td>
                   <td>{job.company}</td>
                   <td>{job.salary}</td>
                   <td>{job.location}</td>
+                  
+                </Link>
                 </tr>
               </tbody>
             )
