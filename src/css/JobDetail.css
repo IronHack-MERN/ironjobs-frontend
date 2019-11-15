@@ -1,0 +1,13 @@
+.container {
+  width: 65%;
+  margin: 0 auto;
+  background-color: #F2F2F2;
+  padding: 20px; }
+
+h2 {
+  margin: 3px 0;
+  color: #848484;
+  text-align: center; }
+
+.job-item-location img {
+  max-height: 12px; }
