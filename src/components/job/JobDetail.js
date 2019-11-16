@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Button from '../Button';
 import iconjob from '../../img/icon-job.png';
 import icongeo from '../../img/icon-geo.png';
 import '../../css/JobDetail.css';
 
 const jobsDetail = (props) => {
   const { _id, company, description, isOffered, location, requeriments, salary, specialty, title, typePosition } = props.location.props.job.job;
+
+  const handleAddApply = () => {
+     console.log('estoy desde handleApply');
+  }
 
   return (
     <div className='container'>
@@ -60,8 +65,11 @@ const jobsDetail = (props) => {
             </div>
           </div>
           <div className="section section--contact t-job-contact" id="how-join-section">
-            <button>APPLY</button>
-            
+            <Button
+              myProp={handleAddApply}
+            >
+              Apply
+            </Button>
           </div>
           <div className="section">
             <h4 className="section__title">Resumen</h4>
