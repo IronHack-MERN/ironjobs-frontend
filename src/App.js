@@ -38,7 +38,6 @@ class App extends Component {
           {/* Nav Bar */}
           <PrivateRoute exact path="/private/jobs" component={JobMenu} />
           <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
-
         </Router>
       </>
     );

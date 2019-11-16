@@ -61,6 +61,7 @@ const jobsDetail = (props) => {
           </div>
           <div className="section section--contact t-job-contact" id="how-join-section">
             <button>APPLY</button>
+            
           </div>
           <div className="section">
             <h4 className="section__title">Resumen</h4>
