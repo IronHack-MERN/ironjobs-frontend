@@ -3,12 +3,18 @@ import Button from '../Button';
 import iconjob from '../../img/icon-job.png';
 import icongeo from '../../img/icon-geo.png';
 import '../../css/JobDetail.css';
+import applyService from '../../services/applyService';
 
 const jobsDetail = (props) => {
+  const state = {
+    name: '',
+  }
+
   const { _id, company, description, isOffered, location, requeriments, salary, specialty, title, typePosition } = props.location.props.job.job;
 
   const handleAddApply = () => {
      console.log('estoy desde handleApply');
+     applyService.addNewApply(_id, props);
   }
 
   return (
