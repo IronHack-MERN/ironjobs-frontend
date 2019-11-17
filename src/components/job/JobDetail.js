@@ -13,7 +13,6 @@ const jobsDetail = (props) => {
   const { _id, company, description, isOffered, location, requeriments, salary, specialty, title, typePosition } = props.location.props.job.job;
 
   const handleAddApply = () => {
-     console.log('estoy desde handleApply');
      applyService.addNewApply(_id, props);
   }
 
