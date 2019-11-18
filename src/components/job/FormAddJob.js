@@ -3,7 +3,6 @@ import '../../css/FormAddJob.css';
 import jobService from '../../services/jobService';
 
 class FormAddJob extends Component {
-
   state = {
     title: '',
     company: '',

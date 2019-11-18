@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import jobService from '../services/jobService';
 import JobCard from '../components/job/JobCard';
 

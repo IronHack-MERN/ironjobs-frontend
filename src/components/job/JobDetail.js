@@ -6,7 +6,8 @@ import applyService from '../../services/applyService';
 
 const jobsDetail = (props) => {
 
-  const { _id, company, description, isOffered, location, requeriments, salary, specialty, title, typePosition } = props.location.props.job.job;
+  // eslint-disable-next-line react/prop-types
+  const { _id, title, company, description, isOffered, location, requeriments, salary, specialty, typePosition } = props.location.props.job;
 
   const handleAddApply = () => {
      applyService.addNewApply(_id, props);

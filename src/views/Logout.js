@@ -4,17 +4,13 @@ import LandingPage from './LandingPage';
 class Logout extends Component {
   constructor() {
     super();
-    this.saludo = "Vuelve cuando quieras";
+    this.bye = "Come back soon!!!";
 }
 
   render() {
-    console.log('********************* INICIO PROPS *********************');
-    console.log(this.props);
-    console.log('********************* FIN PROPS *********************');
     return (
       <div>
-       <h1>{this.saludo}</h1>
-      
+       <h1>{this.bye}</h1>
        <LandingPage />
       </div>
     );

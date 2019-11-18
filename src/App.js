@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { withAuth } from './Context/AuthContext';
 
 import PrivateView from './views/PrivateView';
@@ -14,8 +14,7 @@ import Header from './components/Header';
 import JobMenu from './components/job/JobMenu';
 import JobDetail from './components/job/JobDetail';
 import FormAddJob from './components/job/FormAddJob';
-import NotFound from './views/NotFound';
-
+// import NotFound from './views/NotFound';
 
 class App extends Component {
 

@@ -9,9 +9,6 @@ const LandingPage = (props) => {
   return (
     <div className='wrapper'>
       <div className='content'>
-        <div className='list-jobs'>
-          <ListJobs />
-        </div>
         <div className='landing-buttons'>
           <div className='center'>
             <Link to={"/register"}> Register</Link>
@@ -21,6 +18,9 @@ const LandingPage = (props) => {
                 : <Link to='/login' style={{ textDecoration: 'none' }}> Login</Link>
             }
           </div>
+        </div>
+        <div className='list-jobs'>
+          <ListJobs />
         </div>
       </div>
     </div>

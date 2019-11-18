@@ -16,26 +16,20 @@ class JobMenu extends Component {
     }
   }
 
-  addJobHandler = () => {
-    console.log('******* AGREGAR EL JOB A LA BD  *****');
-  }
-
   // eslint-disable-next-line class-methods-use-this
   render() {
-    console.log('*****PASO POR JOB MENU OK ******');
 
     return (
-      <div>
-        <h1> _ </h1>
-        <Link
-          to={{
-            pathname: '/private/job/post',
-            props: {
-              addTheJob: this.addJobHandler
-            }
-          }}>
-          Post a job offer
+      <div className=''>
+        <div className='button'>
+          <Link
+            to={{
+              pathname: '/private/job/post',
+            }}>
+            Post a job offer
           </Link>
+        </div>
+
         <ListJobs />
       </div>
     );
