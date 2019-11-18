@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import iconjob from '../../img/icon-job.png';
+import '../../css/JobCard.css';
 
 const JobCard = (props) => {
 
@@ -21,7 +22,7 @@ const JobCard = (props) => {
             </p>
           </div>
           <div className='card-working-day'>
-            Jornada completa
+            Full time
           </div>
         <div className='card-location'>{location}</div>
         <div className='card-date'>18/11/2019</div>
