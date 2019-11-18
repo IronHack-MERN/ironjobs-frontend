@@ -3,6 +3,22 @@ import { Link } from 'react-router-dom';
 import ListJobs from '../ListJobs';
 
 class JobMenu extends Component {
+  constructor() {
+    super();
+    this.state = {
+      job: '',
+      company: '',
+      textAreaDescription: '',
+      textAreaRequeriments: '',
+      location: '',
+      selectInputType: 'Job',
+      selectInputSpecialty: 'Web development'
+    }
+  }
+
+  addJobHandler = () => {
+    console.log('******* AGREGAR EL JOB A LA BD  *****');
+  }
 
   // eslint-disable-next-line class-methods-use-this
   render() {
@@ -15,7 +31,8 @@ class JobMenu extends Component {
           to={{
             pathname: '/private/job/post',
             props: {
-              
+              // eslint-disable-next-line no-undef
+              addTheJob: this.addJobHandler
             }
           }}>
           Post a job offer

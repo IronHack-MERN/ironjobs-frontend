@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../css/FormAddJob.css';
 
 class FormAddJob extends Component {
 
@@ -11,7 +12,8 @@ class FormAddJob extends Component {
       textAreaRequeriments: '',
       location: '',
       selectInputType: 'Job',
-      selectInputSpecialty: 'Web development'
+      selectInputSpecialty: 'Web Development',
+      value: 'coconut'
     }
   }
 
@@ -25,6 +27,7 @@ class FormAddJob extends Component {
     event.preventDefault();
     // eslint-disable-next-line react/prop-types
     this.props.addTheJob(this.state);
+    console.log(this.state)
     this.setState({
       job: '',
       company: '',
@@ -38,41 +41,43 @@ class FormAddJob extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div job-post-section>
+        <form className='job-post-form' onSubmit={this.handleSubmit}>
           <label>Job</label>
-          <input type="text" name="job" value={this.state.job} onChange={(e) => this.handleChange(e)} />
+          <input type="text" name="job" value={this.state.job} onChange={(e) => this.handleChange(e)} /> <br />
 
           <label>Company</label>
-          <input type="text" name="company" value={this.state.company} onChange={(e) => this.handleChange(e)} />
+          <input type="text" name="company" value={this.state.company} onChange={(e) => this.handleChange(e)} /> <br />
 
-          <label> Description</label>
-          <textarea name="textAreaDescription" value={this.state.textAreaDescription} onChange={e => this.handleChange(e)} />
+          <label> Description</label> <br />
+          <textarea name="textAreaDescription" value={this.state.textAreaDescription} onChange={e => this.handleChange(e)} /> <br />
 
           <label> Requeriments</label>
           <textarea name="textAreaRequeriments" value={this.state.textAreaRequeriments} onChange={e => this.handleChange(e)} />
 
-          <label>Location</label>
-          <input type="text" name="job" value={this.state.job} onChange={(e) => this.handleChange(e)} />
+          <div>
+            <label>Location</label>
+            <input type="text" name="location" value={this.state.location} onChange={(e) => this.handleChange(e)} />
 
-          <label>Type</label>
-          <select name="selectInputType" value={this.state.selectInputType} onChange={e => this.handleChange(e)} >
-            <option value={this.state.selectInputType}>{this.state.selectInputType}</option>
-            <option value="Internship">Internship</option>
-            <option value="Job">Job</option>
-            <option value="Freelance">Freelance</option>
-            <option value="Project">Project</option>
-          </select>
+            <label>Type</label>
+            <select name="selectInputType" value={this.state.selectInputType} onChange={e => this.handleChange(e)} >
+              <option value="Internship">Internship defaultValue</option>
+              <option value="Job">Job</option>
+              <option value="Freelance">Freelance</option>
+              <option value="Project">Project</option>
+            </select> <br/>
 
-          <label>Specialty</label>
-          <select name="selectInputSpecialty" value={this.state.selectInputSpecialty} onChange={e => this.handleChange(e)} >
-            <option value={this.state.selectInputSpecialty}>{this.state.selectInputSpecialty}</option>
-            <option value="Web development" selected>Web development</option>
-            <option value="UX - UI Design">UX - UI Design</option>
-            <option value="Data analytics">Data analytics</option>
-          </select>
+            <label>Specialty</label>
+            <select name="selectInputSpecialty" value={this.state.selectInputSpecialty} onChange={e => this.handleChange(e)} >
+              <option value="Web development">Web development</option>
+              <option value="UX - UI Design">UX - UI Design</option>
+              <option value="Data analytics">Data analytics</option>
+            </select>
+          </div>
 
-          <input type="submit" value="Submit" />
+          <div className='submit-form'>
+            <input type="submit" value="Add Job" />
+          </div>
         </form>
       </div>
     );

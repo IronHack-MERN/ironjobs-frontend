@@ -5,8 +5,8 @@ import itemsProfile from '../data/items-profile.json';
 
 
 class MyProfile extends Component {
+  // eslint-disable-next-line class-methods-use-this
   render() {
-    const { username } = this.props.user;
 
     return (
       <div className='content'>

@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from '../Button';
-import iconjob from '../../img/icon-job.png';
 import icongeo from '../../img/icon-geo.png';
 import '../../css/JobDetail.css';
 import applyService from '../../services/applyService';
 
 const jobsDetail = (props) => {
-  const state = {
-    name: '',
-  }
 
   const { _id, company, description, isOffered, location, requeriments, salary, specialty, title, typePosition } = props.location.props.job.job;
 
@@ -33,7 +29,7 @@ const jobsDetail = (props) => {
               {/* <img src={iconjob} alt='iron-beer-logo' /> */}
             </picture>
           </hgroup>
-          <p className="job-item-location"><span><img src={icongeo} /></span> {location}</p>
+          <p className="job-item-location"><span><img src={icongeo} alt = 'icon-location'/></span> {location}</p>
           <div className="circle-badge circle-badge--full_time">Parcial</div>
         </header>
 

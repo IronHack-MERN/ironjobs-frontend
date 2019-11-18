@@ -44,8 +44,6 @@ export default class AuthProvider extends Component {
           user,
           isLoading: false,
         })
-
-        console.log('mememe', user);
       })
       .catch(() => {
         this.setState({

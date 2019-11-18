@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import itemsProfile from '../data/items-profile.json';
-import { Link } from 'react-router-dom';
 
 const myProfileDetails = (props) => {
   console.log(props);
