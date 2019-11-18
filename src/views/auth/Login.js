@@ -29,7 +29,7 @@ class Login extends Component {
       <div className='center'>
         <form onSubmit={this.handleFormSubmit}>
           <p>
-            <label htmlFor='username' >Username:</label>
+            <label htmlFor='username'>Username:</label>
             <input
               type="text"
               id='username'
@@ -39,8 +39,9 @@ class Login extends Component {
               placeholder='username' />
           </p>
           <p>
-            <label htmlFor='password' >Password:</label>
-            <input type="password"
+            <label htmlFor='password'>Password:</label>
+            <input 
+              type="password"
               id='password'
               name="password"
               value={password}

@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { withAuth } from './Context/AuthContext';
+
 import PrivateView from './views/PrivateView';
 import Login from './views/auth/Login';
-import Logout from './views/Logout'
+import Logout from './views/Logout';
 import Signup from './views/auth/Signup';
-import { withAuth } from './Context/AuthContext';
 
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import LandingPage from './views/LandingPage';
 import Header from './components/Header';
 import JobMenu from './components/job/JobMenu';
-import JobDetail from './components/job/JobDetail'
-import FormAddJob from './components/job/FormAddJob'
+import JobDetail from './components/job/JobDetail';
+import FormAddJob from './components/job/FormAddJob';
+import NotFound from './views/NotFound';
+
 
 class App extends Component {
 
@@ -35,6 +38,8 @@ class App extends Component {
           <PrivateRoute exact path="/private/job/post" component={FormAddJob} />
           <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
           
+          {/* <Route component={NotFound} /> */}
+
         </Router>
       </>
     );
