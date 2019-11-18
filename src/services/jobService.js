@@ -12,6 +12,11 @@ class JobService {
         return this.job.get('/jobs')
             .then(({ data: jobs }) => jobs);
     }
+
+    async addNewJob(body){
+        return this.job.post('/jobs', body)
+            .then(({ data: job }) => job);
+    }
 }
 
 const jobService = new JobService()

@@ -31,7 +31,6 @@ class JobMenu extends Component {
           to={{
             pathname: '/private/job/post',
             props: {
-              // eslint-disable-next-line no-undef
               addTheJob: this.addJobHandler
             }
           }}>
