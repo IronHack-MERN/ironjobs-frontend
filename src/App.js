@@ -12,23 +12,18 @@ import LandingPage from './views/LandingPage';
 import Header from './components/Header';
 import JobMenu from './components/job/JobMenu';
 import JobDetail from './components/job/JobDetail'
+import FormAddJob from './components/job/FormAddJob'
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      hola: 'hola',
-    }
-  }
 
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
       <>
-      <Header />
+        <Header />
         <Router>
           <Route exact path="/" component={LandingPage} />
-          
+
           <AnonRoute exact path="/login" component={Login} />
           <AnonRoute exact path="/register" component={Signup} />
 
@@ -37,7 +32,9 @@ class App extends Component {
 
           {/* Nav Bar */}
           <PrivateRoute exact path="/private/jobs" component={JobMenu} />
+          <PrivateRoute exact path="/private/job/post" component={FormAddJob} />
           <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
+          
         </Router>
       </>
     );

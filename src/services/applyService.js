@@ -10,7 +10,6 @@ class ApplyService{
 
   // Create new apply an offer
   async addNewApply(id, body){
-    console.log("el id que recibe applyService: ", id)
     return this.apply.post(`/applies/${id}`, body)
     .then(({ data: apply }) => apply);
   }

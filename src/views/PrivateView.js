@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
 import NavBar from '../components/NavBar';
 import MyProfile from '../components/MyProfile';
 import PrivateRoute from '../components/PrivateRoute';
 import MyProfileDetail from '../components/MyProfileDetail';
 import JobDetail from '../components/job/JobDetail';
-import JobMenu from '../components/job/JobMenu';
 
 const PrivateView = ({ user }) => {
   return (
