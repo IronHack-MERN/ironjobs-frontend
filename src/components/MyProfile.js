@@ -3,6 +3,7 @@ import '../css/MyProfile.css';
 import { Link } from 'react-router-dom';
 import ListJobs from '../components/ListJobs';
 import itemsProfile from '../data/items-profile.json';
+import imageprofile from '../img/helen_profile.jpeg';
 
 
 class MyProfile extends Component {
@@ -28,15 +29,12 @@ class MyProfile extends Component {
         </div> */}
 
         <div className="my-profile-card">
-          <img src="/w3images/team2.jpg" alt='iron-beer-logo' />
-          <h1>John Doe</h1>
-          <p className="title">CEO  Founder, Example</p>
-          <p>Harvard University</p>
-          <div >
-            {/* <a href="#"><i className="fa fa-dribbble"></i></a>
-            <a href="#"><i className="fa fa-twitter"></i></a>
-            <a href="#"><i className="fa fa-linkedin"></i></a>
-            <a href="#"><i className="fa fa-facebook"></i></a> */}
+          <img src={imageprofile} alt='iron-beer-logo' />
+          <h1>Sophia Helena</h1>
+          <p className="title">FullStack developer student</p>
+          <p>Iron Hack</p>
+          <div className='resumen-profile'>
+          Orci iaculis morbi proin est sed risus imperdiet nam varius, mi primis condimentum phasellus ac conubia facilisi duis curabitur, ornare luctus turpis venenatis commodo mus nibh parturient. Sociis lectus metus inceptos taciti platea integer quis fermentum egestas et, euismod vivamus at vitae dictumst pretium potenti lacus class ante eleifend, etiam convallis litora mauris rhoncus sollicitudin augue velit cursus. Malesuada tempus ad purus tempor vestibulum cum mattis vel, montes fringilla fames quisque tristique nascetur porta sagittis, nullam nisi dignissim magnis maecenas urna hac. Penatibus neque dui blandit aliquam auctor facilisis odio suscipit ultrices, aliquet nunc sodales pharetra nostra tortor diam elementum.
           </div>
           <p><button>Update</button></p>
         </div>

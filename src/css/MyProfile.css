@@ -12,6 +12,11 @@
   color: grey;
   font-size: 18px; }
 
+.resumen-profile {
+  text-align: justify;
+  margin: 10px;
+  margin-bottom: 30px; }
+
 button {
   border: none;
   outline: 0;
