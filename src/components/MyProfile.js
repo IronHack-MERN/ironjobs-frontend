@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/MyProfile.css';
 import { Link } from 'react-router-dom';
+import ListJobs from '../components/ListJobs';
 import itemsProfile from '../data/items-profile.json';
 
 
@@ -10,7 +11,7 @@ class MyProfile extends Component {
 
     return (
       <div className='content'>
-        <div className="">
+        {/* <div className="">
           {
             itemsProfile.map((oneItem, index) => {
               return (
@@ -24,7 +25,22 @@ class MyProfile extends Component {
               )
             })
           }
+        </div> */}
+
+        <div className="my-profile-card">
+          <img src="/w3images/team2.jpg" alt='iron-beer-logo' />
+          <h1>John Doe</h1>
+          <p className="title">CEO  Founder, Example</p>
+          <p>Harvard University</p>
+          <div >
+            {/* <a href="#"><i className="fa fa-dribbble"></i></a>
+            <a href="#"><i className="fa fa-twitter"></i></a>
+            <a href="#"><i className="fa fa-linkedin"></i></a>
+            <a href="#"><i className="fa fa-facebook"></i></a> */}
+          </div>
+          <p><button>Update</button></p>
         </div>
+
       </div>
     );
   }

@@ -7,16 +7,30 @@
 p {
   margin-bottom: 20px; }
 
-header {
-  background: rgba(0, 0, 0, 0.9);
-  width: 70%;
-  position: fixed;
-  z-index: 100; }
+.nav-bar-header {
+  background: #1D90FF;
+  color: white;
+  width: 100%; }
+
+.wrapper-nav-bar {
+  margin: 0 auto; }
 
 nav {
   float: initial;
   /* Desplazamos el nav hacia la izquierda */
   margin: 0auto; }
+
+.fix-nav-bar {
+  margin: 0 auto;
+  color: white; }
+
+.fix-nav-bar a:visited {
+  margin: 0 auto;
+  color: white; }
+
+.fix-nav-bar a:hover {
+  background-color: white;
+  color: #1D90FF; }
 
 nav ul {
   list-style: none;
@@ -26,7 +40,9 @@ nav ul {
 nav ul li {
   float: left;
   font-family: Arial, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  width: 20%;
+  text-align: center; }
 
 nav ul li a {
   display: block;
