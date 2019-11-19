@@ -3,7 +3,7 @@ import '../css/NavBar.scss';
 
 const NavBar = () => {
   return (
-    <header>
+    <header className = 'nav-bar-header'>
       <section className="wrapper-nav-bar">
         <nav className='fix-nav-bar'>
           <ul>
