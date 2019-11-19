@@ -1,11 +1,11 @@
 import React from 'react';
-import '../css/Header.scss';
+import '../css/NavBar.scss';
 
 const NavBar = () => {
   return (
-    <div>
-      <section className="wrapper">
-        <nav className='nav-bar'>
+    <header>
+      <section className="wrapper-nav-bar">
+        <nav className='fix-nav-bar'>
           <ul>
             <li><a href="/login">My profile</a></li>
             <li><a href="/login">My applies</a></li>
@@ -15,7 +15,7 @@ const NavBar = () => {
           </ul>
         </nav>
       </section>
-    </div>
+    </header>
   );
 };
 

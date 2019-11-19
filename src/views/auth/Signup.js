@@ -59,7 +59,10 @@ class Signup extends Component {
 
         <div className='have-account'>
           Already have account?
-        <Link to={"/login"}> Login</Link>
+          
+            <Link className='link-visible' to={"/login"}> Login</Link>
+        
+        
         </div>
         <p>
 

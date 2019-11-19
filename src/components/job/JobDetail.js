@@ -10,87 +10,83 @@ const jobsDetail = (props) => {
   const { _id, title, company, description, isOffered, location, requeriments, salary, specialty, typePosition } = props.location.props.job;
 
   const handleAddApply = () => {
-     applyService.addNewApply(_id, props);
+    applyService.addNewApply(_id, props);
+    alert('you have apply correctly!');
   }
 
   return (
-    <div className='container'>
-      <div className="job-card">
-        <header className="header-job-card">
-          <div className="">
-            <p className="dateposted">
-              Published: 
+    <div className='wrapper-job-card'>
+      <div className="card">
+        <div className="container">
+          <p className="dateposted">
+            Published:
               <span className="published">5/11/2019</span>
-            </p>
-          </div>
-          <hgroup className="hgroup-job-card">
-            <h1>{title}</h1>
-            <h2> {company} </h2>
-            <picture>
-              {/* <img src={iconjob} alt='iron-beer-logo' /> */}
-            </picture>
-          </hgroup>
-          <p className="job-item-location"><span><img src={icongeo} alt = 'icon-location'/></span> {location}</p>
-          <div className="circle-badge circle-badge--full_time">Parcial</div>
-        </header>
+            <Button className='apply-button'
+              myProp={handleAddApply}
+            >
+              Apply
+            </Button>
+          </p>
+        </div>
+
+        <div>
+          <h1>{title}</h1>
+          <h2> {company} </h2>
+        </div>
+
+        <div>
+          <p className="job-item-location"><span><img src={icongeo} alt='icon-location' /></span> {location} - Full time</p>
+          <div className="circle-badge circle-badge--full_time"></div>
+        </div>
 
         <article className="job-card-body">
           <div className="section">
             <div className="job-description">
-              <p>
+              <p className='p-justify'>
                 <strong>{title}</strong> <br />
                 {description}
               </p>
 
-              <p><strong>Is offered</strong> <br/>
-                {isOffered} 
+              <p className='p-justify'><strong>Is offered</strong> <br />
+                {isOffered}
               </p>
 
-              <p><strong>Requeriments</strong><br/>
+              <p className='p-justify'><strong>Requeriments</strong><br />
                 {requeriments}
               </p>
 
-              <p>
+              <p className='p-justify'>
                 <strong>Description</strong> <br />
                 {description}
               </p>
 
-              <p>
+              <p className='p-justify'>
                 <strong>Specialty</strong> <br />
                 {specialty}
               </p>
 
-              <p>
+              <p className='p-justify'>
                 <strong>Type Position</strong> <br />
                 {typePosition}
               </p>
             </div>
           </div>
-          <div className="section section--contact t-job-contact" id="how-join-section">
-            <Button
-              myProp={handleAddApply}
-            >
-              Apply
-            </Button>
-          </div>
-          <div className="section">
+
+          <div className="resumen">
             <h4 className="section__title">Resumen</h4>
-            <dl>
-              <dt>Job: </dt>
-              <dd>{title} </dd>
+            <ul>
+              <li><strong>Job:</strong> {title} </li>
+              <li><strong>Company:</strong> {company} </li>
+              <li><strong>Salary:</strong> {salary}</li>
+              <li><strong>Specialty: </strong>{specialty} </li>
+            </ul>
 
-              <dt>Company: </dt>
-              <dd>{company} </dd>
-
-              <dt>Specialty: </dt>
-              <dd>{specialty} </dd>
-
-              <dt>Salary: </dt>
-              <dd> {salary} </dd>
-            </dl>
           </div>
         </article>
+
       </div>
+
+
     </div>
   )
 }

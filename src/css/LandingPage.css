@@ -1,9 +1,12 @@
-body {
-  margin: 3%; }
+.wrapper {
+  width: 100%; }
 
 .content {
   width: 100%;
   margin: 0 auto; }
+
+.center a:visited {
+  color: white; }
 
 h1 {
   text-align: center; }
