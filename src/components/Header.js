@@ -15,9 +15,9 @@ const Header = (props) => {
                 </Link>
                 {/* Welcome {username} */}
 
-                {/* <div className='header-right'>
+                <div className='header-right'>
                     <a className="active" href="/">Home</a>
-                </div> */}
+                </div>
 
             </div>
 
