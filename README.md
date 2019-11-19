@@ -138,7 +138,7 @@ The url to your repository and to your deployed project
 
 [Repository Backend Link](https://github.com/elenapiaggio/ironjobs-backend)
 
-[Deploy Link](https://eloquent-torvalds-3e8b18.netlify.com/)
+[Deploy Link](https://ironjobs.netlify.com/)
 
 ### Slides
 
