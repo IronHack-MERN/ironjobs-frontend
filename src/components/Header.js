@@ -13,16 +13,10 @@ const Header = (props) => {
                     <h1 className='header'> <span></span>Iron Jobs</h1>
                     <h3>Find the job that makes you happy</h3>
                 </Link>
-                <div className='header-right'>
-                    <a className="active" href="#home">Home</a>
-                    {/* Welcome {username} */}
+                {/* Welcome {username} */}
 
-                    <Link to={"/register"}> Register</Link>
-                        {
-                            props.isLoggedin
-                                ? <Link to='/logout' style={{ textDecoration: 'none' }}> Logout</Link>
-                                : <Link to='/login' style={{ textDecoration: 'none' }}> Login</Link>
-                        }
+                <div className='header-right'>
+                    <a className="active" href="/">Home</a>
                 </div>
 
             </div>

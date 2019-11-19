@@ -2,11 +2,12 @@
   box-sizing: border-box; }
 
 form {
-  width: 70%;
+  width: 40%;
   padding: 16px;
   border-radius: 10px;
   margin: auto;
   background-color: #F8F9F9; }
+
 
 form label {
   width: 10%;
@@ -15,12 +16,13 @@ form label {
 
 form select,
 form input[type="text"],
+form input[type="password"],
 form input[type="email"] {
-  width: 90%;
+  width: 100%;
   padding: 3px 10px;
   border: 1px solid #f6f6f6;
   border-radius: 3px;
-  background-color: #f6f6f6;
+  /* background-color: #f6f6f6; */
   margin: 8px 0;
   display: inline-block; }
 

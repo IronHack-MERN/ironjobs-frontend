@@ -36,6 +36,7 @@ class App extends Component {
           <PrivateRoute exact path="/private/jobs" component={JobMenu} />
           <PrivateRoute exact path="/private/job/post" component={FormAddJob} />
           <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
+
           
           {/* <Route component={NotFound} /> */}
 

@@ -2,16 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
 import ListJobs from '../components/ListJobs';
-import '../css/Login.scss';
+// import '../css/Login.scss';
 import '../css/LandingPage.css';
+import '../css/Header.scss';
 
 const LandingPage = (props) => {
   return (
     <div className='wrapper'>
       <div className='content'>
         <div className='landing-buttons'>
-          <div className='center'>
-            <Link to={"/register"}> Register</Link>
+        
+          <div className='center button'>
+            {
+              props.isLoggedin
+                ? <Link to='/' style={{ textDecoration: 'none' }}> Home</Link>
+                : <Link to='/register' style={{ textDecoration: 'none' }}> Register</Link>
+            }
             {
               props.isLoggedin
                 ? <Link to='/logout' style={{ textDecoration: 'none' }}> Logout</Link>
@@ -28,3 +34,4 @@ const LandingPage = (props) => {
 }
 
 export default withAuth(LandingPage);
+
