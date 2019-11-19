@@ -26,7 +26,7 @@ class Login extends Component {
     const { username, password } = this.state;
     console.log('login: ', this.props)
     return (
-      <div className='center'>
+      <div className='login'>
         <form onSubmit={this.handleFormSubmit}>
           <p>
             <label htmlFor='username'>Username:</label>
