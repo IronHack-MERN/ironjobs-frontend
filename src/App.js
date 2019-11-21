@@ -14,6 +14,7 @@ import Header from './components/Header';
 import JobMenu from './components/job/JobMenu';
 import JobDetail from './components/job/JobDetail';
 import FormAddJob from './components/job/FormAddJob';
+import MyAppliesList from './components/apply/MyAppliesList';
 // import NotFound from './views/NotFound';
 
 class App extends Component {
@@ -32,15 +33,16 @@ class App extends Component {
           <PrivateRoute exact path="/logout" component={Logout} />
           <PrivateRoute exact path="/private" component={PrivateView} />
 
+          <PrivateRoute exact path="/private/applies" component={MyAppliesList} />
+          
           {/* Nav Bar */}
           <PrivateRoute exact path="/private/jobs" component={JobMenu} />
           <PrivateRoute exact path="/private/job/post" component={FormAddJob} />
           <PrivateRoute exact path="/private/jobs/:id" component={JobDetail} />
 
-          
           {/* <Route component={NotFound} /> */}
-
         </Router>
+        
       </>
     );
   }
