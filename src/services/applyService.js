@@ -18,6 +18,11 @@ class ApplyService{
     return this.apply.get('/applies')
       .then(({ data: applies }) => applies);
   }
+
+  async getMyApplies(id, body){
+    return this.apply.get(`/applies/${id}`, body)
+      .then(({ data: myApplies }) => myApplies);
+  }
 }
 
 const applyService = new ApplyService();
