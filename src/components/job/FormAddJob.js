@@ -33,11 +33,12 @@ class FormAddJob extends Component {
     this.setState({
       title: '',
       company: '',
-      description: ' ... ',
-      textAreaRequeriments: ' ... ',
+      description: '',
+      requeriments: '',
       location: '',
-      selectInputType: '',
-      selectInputSpecialty: ''
+      typePosition: '',
+      specialty: '',
+      salary: ''
     })
   }
 

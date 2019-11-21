@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/NavBar.scss';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -8,9 +9,9 @@ const NavBar = () => {
         <nav className='fix-nav-bar'>
           <ul>
             <li><a href="/login">My profile</a></li>
-            <li><a href="/login">My applies</a></li>
+            <li><a href="/private/applies">My applies</a></li>
             <li><a href="/private/jobs">Jobs</a></li>
-            <li><a href="/login">Documents</a></li>
+            <li><a href="/private/job/post">Post a job</a></li>
             <li><a href="/login">Mensajes</a></li>
           </ul>
         </nav>
