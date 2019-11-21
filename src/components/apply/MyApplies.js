@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class MyAppliesList extends Component {
+class MyApplies extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class MyAppliesList extends Component {
   }
 }
 
-export default MyAppliesList;
+export default MyApplies;
