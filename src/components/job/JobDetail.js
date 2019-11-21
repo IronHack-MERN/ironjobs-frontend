@@ -11,7 +11,6 @@ const jobsDetail = (props) => {
 
   const handleAddApply = () => {
     applyService.addNewApply(_id, props);
-    alert('you have apply correctly!');
   }
 
   return (
