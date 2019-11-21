@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import logo from '../img/logo.png';
+// import logo from '../img/logo.png';
 import '../css/Header.scss';
 
 const Header = (props) => {
@@ -16,7 +16,7 @@ const Header = (props) => {
                 {/* Welcome {username} */}
 
                 <div className='header-right'>
-                    <a className="active" href="/">Home</a>
+                    <a className="active" href="/private">Home</a>
                 </div>
 
             </div>
