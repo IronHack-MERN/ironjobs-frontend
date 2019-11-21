@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../css/MyProfile.css';
-import { Link } from 'react-router-dom';
-import ListJobs from '../components/ListJobs';
-import itemsProfile from '../data/items-profile.json';
+// import { Link } from 'react-router-dom';
+// import ListJobs from '../components/ListJobs';
+// import itemsProfile from '../data/items-profile.json';
 import imageprofile from '../img/helen_profile.jpeg';
 
 

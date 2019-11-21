@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import logo from '../img/logo.png';
+// import logo from '../img/logo.png';
 import '../css/Header.scss';
 
 const Header = (props) => {
