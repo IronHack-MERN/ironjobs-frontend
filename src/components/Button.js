@@ -2,7 +2,7 @@ import React from 'react';
 
 const Button = ({ children, myProp }) => {
   return (
-    <button onClick={myProp}>
+    <button className="button-primary u-full-width" onClick={myProp}>
       {children}
     </button>
   );

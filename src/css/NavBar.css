@@ -1,63 +1,55 @@
-/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
-* {
-  padding: 0;
-  margin: 0; }
-
-/*Agregamos margenes inferiores a los parrafos*/
-p {
-  margin-bottom: 20px; }
-
-.nav-bar-header {
-  background: #1D90FF;
-  color: white;
-  width: 100%; }
-
-.wrapper-nav-bar {
-  margin: 0 auto; }
-
-nav {
-  float: initial;
-  /* Desplazamos el nav hacia la izquierda */
-  margin: 0auto; }
-
-.fix-nav-bar {
-  margin: 0 auto;
-  color: white; }
-
-.fix-nav-bar a:visited {
-  margin: 0 auto;
-  color: white; }
-
-.fix-nav-bar a:hover {
-  background-color: white;
-  color: #1D90FF; }
-
-nav ul {
-  list-style: none;
-  overflow: hidden;
-  /* Limpiamos errores de float */ }
-
-nav ul li {
-  float: left;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  width: 20%;
-  text-align: center; }
-
-nav ul li a {
-  display: block;
-  /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  padding: 20px;
-  color: #fff;
-  text-decoration: none; }
-
-nav ul li:hover {
-  background: #1D90FF; }
-
-.contenido {
-  padding-top: 80px; }
-
-.wrapper-nav-bar {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden; }
+.navBar{
+  margin: 0auto;
+  text-align: center;
+  }
+  
+  /*Floats each item to the left with padding of 14 & 16 px.
+  Removes the underline with text decoration = none.*/
+  .navBar a{
+    color: #1FADDA;
+    padding: 0px 25px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: Tahoma;
+  }
+  
+  /*Background color change during hover state*/
+  .navBar a:hover{
+    background-color: white;
+    color: #009cde;
+  }
+  
+  /*Hides the menu Icon which will show when the nav needs to be responsive*/
+  .navBar .icon{
+    display: none;
+  }
+  
+  /*Set your custom screen width here replacing 700*/
+  @media (max-width: 700px){
+  /*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+    .navBar a:not(:first-child){
+      display: none;
+    }
+  /*Brings the menu icon into view and floats it to the right*/
+    .navBar a.icon{
+      display: block; float: right;
+    }
+    
+  /*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+    .navBar.responsive {
+      position: relative;
+    }
+    .navBar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+  /*Removes the originally set float and brings them to view*/
+    .navBar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  

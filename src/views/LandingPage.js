@@ -2,9 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '../Context/AuthContext';
 import ListJobs from '../components/ListJobs';
-// import '../css/Login.scss';
-import '../css/LandingPage.css';
-import '../css/Header.scss';
 
 const LandingPage = (props) => {
   return (
@@ -15,7 +12,7 @@ const LandingPage = (props) => {
           <div className='center button'>
             {
               props.isLoggedin
-                ? <Link to='/' style={{ textDecoration: 'none' }}> Home</Link>
+                ? <Link to='/' style={{ textDecoration: 'none' }}> Homes</Link>
                 : <Link to='/register' style={{ textDecoration: 'none' }}> Register</Link>
             }
             {
