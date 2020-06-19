@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import '../css/MyProfile.css';
 // import { Link } from 'react-router-dom';
 // import ListJobs from '../components/ListJobs';
 // import itemsProfile from '../data/items-profile.json';
 import imageprofile from '../img/helen_profile.jpeg';
 
-
 class MyProfile extends Component {
   // eslint-disable-next-line class-methods-use-this
   render() {
-
     return (
-      <div className='content'>
+      <div className="contenido contenido-principal">
         {/* <div className="">
           {
             itemsProfile.map((oneItem, index) => {
@@ -27,18 +24,31 @@ class MyProfile extends Component {
             })
           }
         </div> */}
-
-        <div className="my-profile-card">
-          <img src={imageprofile} alt='iron-beer-logo' />
-          <h1>Sophia Helena</h1>
-          <p className="title">FullStack developer student</p>
-          <p>Iron Hack</p>
-          <div className='resumen-profile'>
-          Orci iaculis morbi proin est sed risus imperdiet nam varius, mi primis condimentum phasellus ac conubia facilisi duis curabitur, ornare luctus turpis venenatis commodo mus nibh parturient. Sociis lectus metus inceptos taciti platea integer quis fermentum egestas et, euismod vivamus at vitae dictumst pretium potenti lacus class ante eleifend, etiam convallis litora mauris rhoncus sollicitudin augue velit cursus. Malesuada tempus ad purus tempor vestibulum cum mattis vel, montes fringilla fames quisque tristique nascetur porta sagittis, nullam nisi dignissim magnis maecenas urna hac. Penatibus neque dui blandit aliquam auctor facilisis odio suscipit ultrices, aliquet nunc sodales pharetra nostra tortor diam elementum.
+        <div className="row">
+          <div className="two columns">
+            <img className="img-profile" src={imageprofile} alt="iron-beer-logo" />
           </div>
-          <p><button>Update</button></p>
+          <div className="six columns">
+            <h1>Sophia Helena</h1>
+          </div>
+          <div className="four columns">
+            <p className="title">FullStack developer student</p>
+            <p>Iron Hack</p>
+          </div>
         </div>
-
+        <div className="resumen-profile">
+          Orci iaculis morbi proin est sed risus imperdiet nam varius, mi primis condimentum phasellus ac conubia
+          facilisi duis curabitur, ornare luctus turpis venenatis commodo mus nibh parturient. Sociis lectus metus
+          inceptos taciti platea integer quis fermentum egestas et, euismod vivamus at vitae dictumst pretium potenti
+          lacus class ante eleifend, etiam convallis litora mauris rhoncus sollicitudin augue velit cursus. Malesuada
+          tempus ad purus tempor vestibulum cum mattis vel, montes fringilla fames quisque tristique nascetur porta
+          sagittis, nullam nisi dignissim magnis maecenas urna hac. Penatibus neque dui blandit aliquam auctor facilisis
+          odio suscipit ultrices, aliquet nunc sodales pharetra nostra tortor diam elementum.
+        </div>
+        <input 
+              className="button-primary u-full-width"
+              type="submit" value="Update" 
+            />
       </div>
     );
   }

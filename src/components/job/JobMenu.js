@@ -21,14 +21,14 @@ class JobMenu extends Component {
 
     return (
       <div className=''>
-        <div className='button'>
+        {/* <div className='button'>
           <Link
             to={{
               pathname: '/private/job/post',
             }}>
             Post a job offer
           </Link>
-        </div>
+        </div> */}
 
         <ListJobs />
       </div>

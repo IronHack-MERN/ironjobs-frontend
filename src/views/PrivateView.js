@@ -15,8 +15,7 @@ const PrivateView = ({ user }) => {
         margin: '0 auto'
       }}
     >
-      <NavBar />
-
+      {/* <NavBar /> */}
       <Router>
         <MyProfile
           user={user}

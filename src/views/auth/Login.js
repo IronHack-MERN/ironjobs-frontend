@@ -1,60 +1,65 @@
 import React, { Component } from 'react';
 import { withAuth } from '../../Context/AuthContext';
-import '../../css/Login.css';
 
 class Login extends Component {
   state = {
-    username: "",
-    password: "",
-  }
+    username: '',
+    password: '',
+  };
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-  }
+  };
 
-  handleFormSubmit = (e) => {
+  handleFormSubmit = e => {
     e.preventDefault();
     const { username, password } = this.state;
     this.props.handleLogin({
       username,
-      password
-    })
-  }
+      password,
+    });
+  };
 
   render() {
     const { username, password } = this.state;
-    console.log('login: ', this.props)
+    console.log('login: ', this.props);
     return (
-      <div className='login'>
+      <div className="contenido-principal contenido">
         <form onSubmit={this.handleFormSubmit}>
           <p>
-            <label htmlFor='username'>Username:</label>
+            <label htmlFor="username">Username:</label>
             <input
+              className="u-full-width"
               type="text"
-              id='username'
+              id="username"
               name="username"
               value={username}
               onChange={this.handleChange}
-              placeholder='username' />
+              placeholder="username"
+            />
           </p>
           <p>
-            <label htmlFor='password'>Password:</label>
-            <input 
+            <label htmlFor="password">Password:</label>
+            <input
+              className="u-full-width"
               type="password"
-              id='password'
+              id="password"
               name="password"
               value={password}
               onChange={this.handleChange}
-              placeholder='password' />
+              placeholder="password"
+            />
           </p>
           <p>
-            <input type="submit" value="Login" />
+            <input 
+              className="button-primary u-full-width"
+              type="submit" value="Login" 
+            />
           </p>
-
         </form>
       </div>
-    )
+    );
   }
 }
 
