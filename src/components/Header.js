@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import logo from '../img/logo.png';
 import NavBar from './NavBar';
 
-const Header = props => {
+const Header = (props) => {
   return (
     <Router>
       <div className="header">

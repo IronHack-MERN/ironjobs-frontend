@@ -43,7 +43,7 @@ class FormAddJob extends Component {
 
   render() {
     return (
-      <div job-post-section>
+      <div>
       
         <form className="contenido contenido-principal" onSubmit={this.handleFormSubmit}>
           <h2>Create new job</h2>
